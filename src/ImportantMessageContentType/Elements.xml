@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<Field ID="{B1EAD15A-A62D-473B-91AA-087360818BF6}"
+		   Name="ImportantMessageSortOrder"
+		   StaticName="ImportantMessageSortOrder"
+		   DisplayName="Sort Order"
+		   Description="Influences the order messages are displayed in the rollup (if more than one message is being displayed). The number must be between 1 and 5, where 1 is the highest priority and 5 is the lowest."
+		   Group="Habanero Apps"
+		   Type="Number"
+		   Min="1"
+		   Max="5"
+		   Required="TRUE">
+		<Default>3</Default>
+	</Field>
+
+	<Field ID="{027BE7F1-1563-4942-A103-EEF56CB2A0F6}"
+		   Name="HideCategoryTitleInRollup"
+		   StaticName="HideCategoryTitleInRollup"
+		   DisplayName="Hide Category Title in Rollup"
+		   Description="If checked, the app part rollup will not display the category title in the display."
+		   Group="Habanero Apps"
+		   Type="Boolean"
+		   Required="TRUE">
+	</Field>
+	
+	<Field ID="{496B6505-1624-4100-BA22-30135FEABC32}"
+		   Name="ImportantMessageCategory"
+		   StaticName="ImportantMessageCategory"
+		   DisplayName="Message Category"
+		   Description="Defines the type of message, which affects how it is displayed in the rollup app part."
+		   Group="Habanero Apps"
+		   Type="Lookup"
+		   List="Lists/ImportantMessageCategories"
+		   Required="TRUE"
+		   ShowField="Title">
+	</Field>
+
+	<Field ID="{30E167E3-5675-458A-9FE9-796325ED8A39}"
+		   Name="ImportantMessageBody"
+		   StaticName="ImportantMessageBody"
+		   DisplayName="Message Body"
+		   Description="Contains the content of the important message."
+		   Group="Habanero Apps"
+		   Type="Note"
+		   Required="FALSE"
+		   RichText="TRUE"
+		   RichTextMode="FullHtml">
+	</Field>
+
+	<Field ID="{A3816824-16B3-4F60-88EE-FB84BC8A36EF}"
+		   Name="ImportantMessageStartDate"
+		   StaticName="ImportantMessageStartDate"
+		   DisplayName="Start Date"
+		   Description="The date and time the message is in effect from."
+		   Group="Habanero Apps"
+		   Type="DateTime"
+		   Format="DateTime"
+		   Required="TRUE"
+		   Sealed="FALSE">
+		<Default>[today]</Default>
+	</Field>
+
+	<Field ID="{AF67D271-D2BB-4BF1-BB8E-12898E998A2E}"
+		   Name="ImportantMessageEndDate"
+		   StaticName="ImportantMessageEndDate"
+		   DisplayName="End Date"
+		   Description="The date and time the message is effective until. This date and time cannot be less than the Start Date."
+		   Group="Habanero Apps"
+		   Type="DateTime"
+		   Format="DateTime"
+		   Required="TRUE"
+		   Sealed="FALSE">
+	</Field>
+
+	<!-- Parent ContentType: Item (0x01) -->
+	<ContentType ID="0x0100427307F17E6F429BA77EC661323A42CE"
+				 Name="Important Message"
+				 Description="Contains an important message, along with the category of message and its effective date range."
+				 Group="Habanero Apps"
+				 Inherits="TRUE"
+				 Version="0">
+		<FieldRefs>
+			<FieldRef ID="{496B6505-1624-4100-BA22-30135FEABC32}" Name="ImportantMessageCategory" />
+			<FieldRef ID="{027BE7F1-1563-4942-A103-EEF56CB2A0F6}" Name="HideCategoryTitleInRollup" />
+			<FieldRef ID="{B1EAD15A-A62D-473B-91AA-087360818BF6}" Name="ImportantMessageSortOrder" />
+			<FieldRef ID="{30E167E3-5675-458A-9FE9-796325ED8A39}" Name="ImportantMessageBody" />
+			<FieldRef ID="{A3816824-16B3-4F60-88EE-FB84BC8A36EF}" Name="ImportantMessageStartDate" />
+			<FieldRef ID="{AF67D271-D2BB-4BF1-BB8E-12898E998A2E}" Name="ImportantMessageEndDate" />
+		</FieldRefs>
+	</ContentType>
+
+</Elements>

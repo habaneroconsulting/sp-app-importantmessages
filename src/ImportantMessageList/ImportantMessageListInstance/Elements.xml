@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance Title="Important Messages" 
+				  OnQuickLaunch="FALSE" 
+				  TemplateType="10001" 
+				  Url="Lists/ImportantMessages" 
+				  Description="Stores messages that can be displayed using the Important Messages App Part">
+		<Data>
+			<Rows>
+				<Row>
+					<Field Name="Id">1</Field>
+					<Field Name="Title">This is an example of a critical message</Field>
+					<Field Name="HideCategoryTitleInRollup">FALSE</Field>
+					<Field Name="ImportantMessageSortOrder">1</Field>
+					<Field Name="ImportantMessageCategory">3;#Critical</Field>
+					<Field Name="ImportantMessageBody">Important announcements that affect the users of your website can use the provided critical category to convey the priority of the communication. An example of the typical scenario for the critical message type is a current system or power outage.</Field>
+					<Field Name="ImportantMessageEndDate">2014-01-01T00:00:00Z</Field>
+				</Row>
+				<Row>
+					<Field Name="Id">2</Field>
+					<Field Name="Title">This is an example of a warning message</Field>
+					<Field Name="HideCategoryTitleInRollup">FALSE</Field>
+					<Field Name="ImportantMessageSortOrder">2</Field>
+					<Field Name="ImportantMessageCategory">2;#Warning</Field>
+					<Field Name="ImportantMessageBody">This category can be used to convey messages that users should be aware of that may have an impact on their work or use of the site. For example, upcoming maintenance windows may use a warning message.</Field>
+					<Field Name="ImportantMessageEndDate">2014-01-01T00:00:00Z</Field>
+				</Row>
+				<Row>
+					<Field Name="Id">3</Field>
+					<Field Name="Title">This is an example of an information message</Field>
+					<Field Name="ImportantMessageSortOrder">3</Field>
+					<Field Name="HideCategoryTitleInRollup">FALSE</Field>
+					<Field Name="ImportantMessageCategory">1;#Information</Field>
+					<Field Name="ImportantMessageBody">This type of message can be used to make site-wide announcements that users may find useful. These are typically low-priority communications that may be of interest to the users.</Field>
+					<Field Name="ImportantMessageEndDate">2014-01-01T00:00:00Z</Field>
+				</Row>
+			</Rows>
+		</Data>
+	</ListInstance>
+</Elements>

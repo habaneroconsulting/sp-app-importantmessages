@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ClientWebPart Name="ClientWebPart" Title="Important Messages" Description="Highlights important message content to site users." DefaultHeight="20" DefaultWidth="800">
+
+		<!-- Content element identifies the location of the page that will render inside the client web part
+         Properties are referenced on the query string using the pattern _propertyName_
+         Example: Src="~appWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_" -->
+		<Content Type="html" Src="~appWebUrl/Pages/ClientWebPart.aspx?RenderMode=iframe&amp;MaxMessageCount=_maximumMessageCount_&amp;RefreshInterval=_refreshInterval_&amp;MessagesListName=ImportantMessagesList&amp;{StandardTokens}" />
+
+		<Properties>
+			<Property Name="maximumMessageCount" Type="int" WebBrowsable="true" WebDisplayName="Maximum Message Count" WebDescription="Number indicating the maximum number of messages to display (leave empty to show all)" WebCategory="Custom Properties" RequiresDesignerPermission="true" DefaultValue="1" />
+			<Property Name="refreshInterval" Type="int" WebBrowsable="true" WebDisplayName="Automatic Refresh Interval, in seconds (leave empty for no auto-refresh)" WebDescription="Time, in seconds, between refresh of the messages displayed (zero means never refresh)" WebCategory="Custom Properties" RequiresDesignerPermission="true" DefaultValue="0" />
+		</Properties>
+
+	</ClientWebPart>
+</Elements>

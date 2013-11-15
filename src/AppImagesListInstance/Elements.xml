@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance Title="App Images"
+				  FeatureId="00BFEA71-52D4-45B3-B544-B1C71B620109"
+				  TemplateType="109"
+				  Description="Picture library that contains images for the Important Messages App."
+				  Url="Lists/AppImages"
+				  RootWebOnly="FALSE">
+	</ListInstance>
+</Elements>

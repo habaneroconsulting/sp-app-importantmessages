@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<ListInstance Title="Important Message Categories" 
+				  OnQuickLaunch="TRUE" 
+				  TemplateType="10003" 
+				  Url="Lists/ImportantMessageCategories" 
+				  Description="Stores the important message category details, that are used as a lookup in the important messages list">
+		<Data>
+			<Rows>
+				<Row>
+					<Field Name="Id">1</Field>
+					<Field Name="ImportantMessageCategoryIconUrl">../Lists/AppImages/info.png</Field>
+					<Field Name="Title">Information</Field>
+					<Field Name="UIForegroundColor">#ffffff</Field>
+					<Field Name="UIBackgroundColor">#006bc5</Field>
+				</Row>
+				<Row>
+					<Field Name="Id">2</Field>
+					<Field Name="ImportantMessageCategoryIconUrl">../Lists/AppImages/warning.png</Field>
+					<Field Name="Title">Warning</Field>
+					<Field Name="UIForegroundColor">#ffffff</Field>
+					<Field Name="UIBackgroundColor">#16406b</Field>
+				</Row>
+				<Row>
+					<Field Name="Id">3</Field>
+					<Field Name="ImportantMessageCategoryIconUrl">../Lists/AppImages/critical.png</Field>
+					<Field Name="Title">Critical</Field>
+					<Field Name="UIForegroundColor">#ffffff</Field>
+					<Field Name="UIBackgroundColor">#f30127</Field>
+				</Row>
+			</Rows>
+		</Data>
+	</ListInstance>
+</Elements>

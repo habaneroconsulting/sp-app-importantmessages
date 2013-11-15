@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B6B1A40-D13A-4E60-86FB-04C03219C3EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImportantMessages</RootNamespace>
+    <AssemblyName>ImportantMessages</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{4c0c94f9-0a8e-4788-bff2-062116e0dcc0}</AppFeaturePartId>
+    <WspPartId>{34e5d465-1638-408b-84f7-b5ba5e4d002f}</WspPartId>
+    <CspkgPartId>{928cfbbb-b70b-4763-bd4f-5a17ea056705}</CspkgPartId>
+    <SqlPackagePartId>{6fba6971-81fa-4607-9db5-4ec77c19d5f6}</SqlPackagePartId>
+    <ActiveDeploymentConfiguration>Deploy App for SharePoint</ActiveDeploymentConfiguration>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ActivePublishProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="AppImagesItems\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e7ea3094-ba67-4819-a4dd-7a4220601ace}</SharePointProjectItemId>
+    </None>
+    <None Include="AppImagesListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5758fb84-0ef2-4b0c-9f1f-08f0425fd8d1}</SharePointProjectItemId>
+    </None>
+    <None Include="ClientWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4b1ef204-12d4-4b39-b525-85e2ad745e87}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\AppImagesItems\AppImagesItems.feature">
+      <FeatureId>{f0f66bfd-2c26-4914-80ab-027282c52c8f}</FeatureId>
+    </None>
+    <None Include="ImportantMessageCategoriesList\ImportantMessageCategoriesListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ba8ef694-c05c-4877-a417-068e7476f39f}</SharePointProjectItemId>
+    </None>
+    <None Include="ImportantMessageCategoriesList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{578d52fb-7e02-4e6d-a3f0-c78d34cd5ece}</SharePointProjectItemId>
+    </None>
+    <None Include="ImportantMessageCategoryContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9f792ab0-e287-41eb-bf10-c7ecae40d0a2}</SharePointProjectItemId>
+    </None>
+    <None Include="ImportantMessageContentType\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dacc4185-355a-491c-90a0-9d7fda1760f5}</SharePointProjectItemId>
+    </None>
+    <None Include="ImportantMessageList\ImportantMessageListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6ebf7227-eef6-4e5b-b34d-abe1baca2388}</SharePointProjectItemId>
+    </None>
+    <None Include="ImportantMessageList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e8755e42-c4b1-4911-97d3-aecb9b87f89e}</SharePointProjectItemId>
+    </None>
+    <None Include="Pages\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7f862402-1720-4db4-8b2a-bd23e254a00c}</SharePointProjectItemId>
+    </None>
+    <Content Include="AppImagesItems\critical.png" />
+    <Content Include="AppImagesItems\Elements.xml" />
+    <Content Include="AppImagesItems\info.png" />
+    <Content Include="AppImagesItems\warning.png" />
+    <Content Include="AppImagesListInstance\Elements.xml" />
+    <Content Include="ClientWebPart\Elements.xml">
+      <SubType>ParentWebElementManifest</SubType>
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <Content Include="Features\AppImagesItems\AppImagesItems.Template.xml">
+      <DependentUpon>AppImagesItems.feature</DependentUpon>
+    </Content>
+    <Content Include="Images\icons\notify.png" />
+    <Content Include="Images\icons\toggle.png" />
+    <Content Include="Images\loaders\loader.gif" />
+    <Content Include="ImportantMessageCategoriesList\Elements.xml" />
+    <Content Include="ImportantMessageCategoriesList\ImportantMessageCategoriesListInstance\Elements.xml" />
+    <Content Include="ImportantMessageCategoriesList\Schema.xml" />
+    <Content Include="ImportantMessageCategoryContentType\Elements.xml" />
+    <Content Include="ImportantMessageContentType\Elements.xml" />
+    <Content Include="ImportantMessageList\Elements.xml" />
+    <Content Include="ImportantMessageList\ImportantMessageListInstance\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ImportantMessageList\Schema.xml" />
+    <Content Include="Pages\ClientWebPart.aspx" />
+    <Content Include="Pages\Elements.xml" />
+    <Content Include="Pages\Default.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6fba6971-81fa-4607-9db5-4ec77c19d5f6}</SharePointProjectItemId>
+    </None>
+    <Content Include="Scripts\knockout.min.js" />
+    <Content Include="Scripts\modernizr.min.js" />
+    <Content Include="Scripts\purl.min.js" />
+    <Content Include="Scripts\Resources.fr-ca.js" />
+    <Content Include="Scripts\Resources.js" />
+    <Content Include="Scripts\Elements.xml" />
+    <Content Include="Scripts\App.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\_references.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b48bf730-cbd3-4490-a6aa-0859579ee1c0}</SharePointProjectItemId>
+    </None>
+    <Content Include="Content\Elements.xml" />
+    <Content Include="Content\App.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Images\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c858fc9a-f823-4941-8c81-d318d7493a2c}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{7fd3de04-3a2f-4108-b1e7-833c7d63730c}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Core\Core.feature">
+      <FeatureId>{965860ff-99a0-49e7-ae35-17ab037567c3}</FeatureId>
+    </None>
+    <None Include="Features\Core\Core.Template.xml">
+      <DependentUpon>Core.feature</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.resx">
+      <OpcRelationship>content-defaultresource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-AU.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-BZ.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-CA.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-IN.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-IE.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-JM.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-MY.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-NZ.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-PH.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-SG.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-ZA.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-TT.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-GB.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-US.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Resources.en-ZW.resx">
+      <OpcRelationship>content-resource</OpcRelationship>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

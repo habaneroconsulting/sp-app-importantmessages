@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Images">
+    <File Path="Images\AppIcon.png" Url="Images/AppIcon.png" />
+    <File Path="Images\loaders\loader.gif" Url="Images/loaders/loader.gif" />
+    <File Path="Images\icons\toggle.png" Url="Images/icons/toggle.png" />
+    <File Path="Images\icons\notify.png" Url="Images/icons/notify.png" />
+</Module>
+</Elements>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Scripts">
+    <File Path="Scripts\App.js" Url="Scripts/App.js" ReplaceContent="true" />
+    <File Path="Scripts\jquery.min.js" Url="Scripts/jquery.min.js" ReplaceContent="true" />
+    <File Path="Scripts\Resources.js" Url="Scripts/Resources.js" ReplaceContent="true" />
+    <File Path="Scripts\Resources.fr-ca.js" Url="Scripts/Resources.fr-ca.js" ReplaceContent="true" />
+    <File Path="Scripts\modernizr.min.js" Url="Scripts/modernizr.min.js" ReplaceContent="true" />
+    <File Path="Scripts\purl.min.js" Url="Scripts/purl.min.js" ReplaceContent="true" />
+    <File Path="Scripts\knockout.min.js" Url="Scripts/knockout.min.js" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

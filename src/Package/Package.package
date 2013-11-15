@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7fd3de04-3a2f-4108-b1e7-833c7d63730c" solutionId="7fd3de04-3a2f-4108-b1e7-833c7d63730c" resetWebServer="false" sharePointProductVersion="15.0" name="ImportantMessages" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="965860ff-99a0-49e7-ae35-17ab037567c3" />
+    <featureReference itemId="f0f66bfd-2c26-4914-80ab-027282c52c8f" />
+  </features>
+</package>

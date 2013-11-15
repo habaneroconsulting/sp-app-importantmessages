@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+	<Module Name="AppImagesItems">
+		<File Path="AppImagesItems\critical.png" Url="Lists/AppImages/critical.png" Type="GhostableInLibrary" DocumentTemplateForList="109" />
+		<File Path="AppImagesItems\info.png" Url="Lists/AppImages/info.png" Type="GhostableInLibrary" DocumentTemplateForList="109" />
+		<File Path="AppImagesItems\warning.png" Url="Lists/AppImages/warning.png" Type="GhostableInLibrary" DocumentTemplateForList="109" />
+	</Module>
+</Elements>

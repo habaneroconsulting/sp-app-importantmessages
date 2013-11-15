@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ImportantMessageCategoriesList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ImportantMessageCategoriesList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/" EnableContentTypes="TRUE">
+	<MetaData>
+		<ContentTypes>
+			<ContentType ID="0x010063662FB8942D470D865AC0781340ECC9" Name="Important Message Category" Group="Custom Content Types" Description="Contains details about the message category, which includes the location of the icon that is associated with each category." Inherits="TRUE" Version="0">
+				<FieldRefs>
+					<FieldRef ID="{3CB39BB1-89A3-4262-BD0E-8B3675D499C9}" Name="ImportantMessageCategoryIconUrl" />
+					<FieldRef ID="{CFDD360E-07B4-44FE-BD7D-9EAAAB01883C}" Name="UIForegroundColor" />
+					<FieldRef ID="{6CBCD16E-3814-4737-BB1C-9EB72AFFFDE8}" Name="UIBackgroundColor" />
+				</FieldRefs>
+			</ContentType>
+		</ContentTypes>
+		<Fields>
+			<Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+			<Field ID="{3CB39BB1-89A3-4262-BD0E-8B3675D499C9}" Name="ImportantMessageCategoryIconUrl" StaticName="ImportantMessageCategoryIconUrl" DisplayName="Icon URL" Group="Habanero Apps" Type="Text" Required="TRUE"></Field>
+			<Field ID="{CFDD360E-07B4-44FE-BD7D-9EAAAB01883C}" Name="UIForegroundColor" StaticName="UIForegroundColor" DisplayName="Foreground Color" Group="Habanero Apps" Type="Text" Required="TRUE"></Field>
+			<Field ID="{6CBCD16E-3814-4737-BB1C-9EB72AFFFDE8}" Name="UIBackgroundColor" StaticName="UIBackgroundColor" DisplayName="Background Color" Group="Habanero Apps" Type="Text" Required="TRUE"></Field>
+		</Fields>
+		<Views>
+			<View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+				<Toolbar Type="Standard" />
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<ViewFields>
+					<FieldRef Name="LinkTitleNoMenu"></FieldRef>
+				</ViewFields>
+				<Query>
+					<OrderBy>
+						<FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+					</OrderBy>
+				</Query>
+				<ParameterBindings>
+					<ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+					<ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+					<ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+				</ParameterBindings>
+			</View>
+			<View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png" Url="AllItems.aspx">
+				<Toolbar Type="Standard" />
+				<XslLink Default="TRUE">main.xsl</XslLink>
+				<JSLink>clienttemplates.js</JSLink>
+				<RowLimit Paged="TRUE">30</RowLimit>
+				<ViewFields>
+					<FieldRef Name="LinkTitle"></FieldRef>
+					<FieldRef Name="ImportantMessageCategoryIconUrl" />
+					<FieldRef Name="UIForegroundColor" />
+					<FieldRef Name="UIBackgroundColor" />
+				</ViewFields>
+				<Query>
+					<OrderBy>
+
+						<FieldRef Name="ID"></FieldRef>
+					</OrderBy>
+				</Query>
+				<ParameterBindings>
+					<ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+					<ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+				</ParameterBindings>
+			</View>
+		</Views>
+		<Forms>
+			<Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+			<Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+			<Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+		</Forms>
+	</MetaData>
+</List>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+	<Field ID="{3CB39BB1-89A3-4262-BD0E-8B3675D499C9}"
+		   Name="ImportantMessageCategoryIconUrl"
+		   StaticName="ImportantMessageCategoryIconUrl"
+		   DisplayName="Icon URL"
+		   Group="Habanero Apps"
+		   Description="The relative URL to the icon image for this category. Ideally you should leverage the AppImages picture library to store your icons, as the App only has permission to read contents from its own App Web. If you use the AppImages picture library, the URL will be something like this: ../Lists/AppImages/imagename.png (make sure to use a relative URL). Recommended icon size is 36px by 36px."
+		   Type="Text"
+		   Required="TRUE">
+	</Field>
+	
+	<Field ID="{CFDD360E-07B4-44FE-BD7D-9EAAAB01883C}"
+		   Name="UIForegroundColor"
+		   StaticName="UIForegroundColor"
+		   DisplayName="Foreground Color"
+		   Description="The HEX color code applied to the text for this category. If an invalid HEX color code is used, the default text color will be applied."
+		   Group="Habanero Apps"
+		   Type="Text"
+		   MaxLength="7"
+		   Required="TRUE">
+	</Field>
+
+	<Field ID="{6CBCD16E-3814-4737-BB1C-9EB72AFFFDE8}"
+		   Name="UIBackgroundColor"
+		   StaticName="UIBackgroundColor"
+		   DisplayName="Background Color"
+		   Description="The HEX color code applied to the background for this category. If an invalid HEX color code is used, the default background color will be applied."
+		   Group="Habanero Apps"
+		   Type="Text"
+		   MaxLength="7"
+		   Required="TRUE">
+	</Field>
+	
+	<!-- Parent ContentType: Item (0x01) -->
+	<ContentType ID="0x010063662FB8942D470D865AC0781340ECC9"
+				 Name="Important Message Category"
+				 Group="Custom Content Types"
+				 Description="Contains details about the message category, which includes the location of the icon that is associated with each category."
+				 Inherits="TRUE"
+				 Version="0">
+		<FieldRefs>
+			<FieldRef ID="{3CB39BB1-89A3-4262-BD0E-8B3675D499C9}" Name="ImportantMessageCategoryIconUrl" />
+			<FieldRef ID="{CFDD360E-07B4-44FE-BD7D-9EAAAB01883C}" Name="UIForegroundColor" />
+			<FieldRef ID="{6CBCD16E-3814-4737-BB1C-9EB72AFFFDE8}" Name="UIBackgroundColor" />
+		</FieldRefs>
+	</ContentType>
+</Elements>
