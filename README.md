@@ -4,17 +4,19 @@ This is the source for our Important Messages app, which you can also [find in t
 
 ##Getting Started
 
-Pull all the files from the "src" folder and open up using Visual Studio (built using VS 2012). 
+Pull all the files from the "src" folder and open up ImportantMessages.sln using Visual Studio (built using VS 2012). 
 
 If you want to deploy the app to your O365 tenant:
 
-1. Make sure you have a developer site collection in your tenant. When you create your collection use the Developer template.
-2. In the Visual Studio solution, open up the Properties Window for the ImportantMessages project. Put the full path to your dev tenant in the "Site URL" property (e.g. "https://contoso.sharepoint.com/sites/dev").
+1. Make sure the site collection you are testing was created using the Developer site template. Otherwise when you try to deploy you will see "sideloading of apps is not enabled on this site".
+2. In Visual Studio, open up the Properties Window for the ImportantMessages project. Put the full path to your developer site collection in the "Site URL" property (e.g. "https://contoso.sharepoint.com/sites/dev").
 3. This will prompt you to authenticate against your tenant.
 4. Once you're authenticated you can publish the app by right clicking the ImportantMessages project and clicking "Deploy".
-5. You'll now see Visual Studio doing it's thing. If you go to Site Contents on your developer site collection you'll see the app installing there as well. NOTE: Sometimes 
+5. You'll now see Visual Studio doing it's thing. If you go to Site Contents on your developer site collection you'll see the app installing there as well.
 
 #### NOTE: If O365 is not being responsive Visual Studio could take awhile to deploy the app. Sometimes it can deploy for 10 minutes or longer. This app typically should deploy in 10 seconds so if you notice it taking too long you can cancel it by going into Site Contents in your dev collection and just cancel the install. Then try the deploy function again.
+
+You can also right click and "Publish", which will package and open up the folder where the .app file is stored. This .app file can be manually installed into an environment as well.
 
 ## Support
 
